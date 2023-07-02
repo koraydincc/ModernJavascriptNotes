@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const ogrenciler = new Map();
+
+      ogrenciler.set(1, "koray dinç");
+      ogrenciler.set("321321321321", "efe can");
+      ogrenciler.set(true, "ali can");
+
+      console.log(ogrenciler.get(1));
+      console.log(ogrenciler.get(true));
+
+      let sonuc;
+
+      sonuc = ogrenciler.size;
+      sonuc = ogrenciler.has(2); // 2 değeri olmadığı için false
+      //   ogrenciler.delete(1);
+      sonuc = ogrenciler.size;
+
+      //   for (let x of ogrenciler.keys()) {
+      //     console.log(x);
+      //   }
+      //   console.log(sonuc);
+
+      //   for (let x of ogrenciler.values()) {
+      //     console.log(x);
+      //   }
+
+      //   for (let x of ogrenciler.entries()) {
+      //     console.log(x);
+      //   }
+
+      for (let [key, value] of ogrenciler.entries()) {
+        console.log(key, value);
+      }
+      console.log(sonuc);
+    </script>
+  </body>
+</html>

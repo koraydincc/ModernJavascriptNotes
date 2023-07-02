@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let user = ["koray", "dinç", "samsun", "ilkadım"];
+
+      let [firstName, lastName, ...address] = user;
+
+      console.log(user);
+
+      //object destructuring
+      let urun = {
+        marka: "Apple",
+        model: "İphone 14",
+        fiyat: "55000",
+      };
+
+      let { marka, model, fiyat, satisDurumu = false } = urun;
+      console.log(marka, model, fiyat, satisDurumu);
+    </script>
+  </body>
+</html>

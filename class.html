@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //function constructor
+      function KisiES5(ad, meslek, dogumYili) {
+        this.ad = ad;
+        this.meslek = meslek;
+        this.dogumYili = dogumYili;
+      }
+
+      KisiES5.prototype.yasHesapla = function () {
+        let tarih = new Date().getFullYear();
+        return tarih - this.dogumYili;
+      };
+
+      let koray = new KisiES5("Koray Dinç", "mühendis", 1998);
+
+      console.log(koray.yasHesapla());
+
+      // class
+
+      class KisiES6 {
+        constructor(ad, meslek, dogumYili) {
+          this.ad = ad;
+          this.meslek = meslek;
+          this.dogumYili = dogumYili;
+          console.log("nesne oluşturuldu");
+        }
+
+        yasHesapla() {
+          let tarih = new Date().getFullYear();
+          return tarih - this.dogumYili;
+        }
+      }
+
+      let kisi1 = new KisiES6("koray dinç", "öğrenci", 1998);
+
+      console.log(kisi1.yasHesapla());
+
+      console.log(kisi1);
+    </script>
+  </body>
+</html>
